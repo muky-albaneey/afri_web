@@ -1,0 +1,13 @@
+#overlay_bg{
+width: 100%;
+background: rgba(0,0,0,.5);
+}
+
+
+#mobile_nav{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* margin: auto; */
+    
+}
