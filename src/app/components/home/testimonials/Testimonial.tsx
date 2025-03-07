@@ -6,14 +6,14 @@ import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 
 const testimonials = [
-  { id: 1, name: "Moyin Odunlayo", image: "/profile.jpg", rating: 5, review: "Afrogora is amazing!" },
-  { id: 2, name: "John Doe", image: "/profile.jpg", rating: 4, review: "Great shopping experience." },
-  { id: 3, name: "Jane Smith", image: "/profile.jpg", rating: 5, review: "Fast delivery and great service!" },
-  { id: 4, name: "Alice Brown", image: "/profile.jpg", rating: 5, review: "Superb product quality!" },
-  { id: 5, name: "Charlie White", image: "/profile.jpg", rating: 4, review: "Very user-friendly platform." },
-  { id: 6, name: "Daniel Green", image: "/profile.jpg", rating: 5, review: "Absolutely love Afrogora!" },
-  { id: 7, name: "Eve Black", image: "/profile.jpg", rating: 5, review: "Highly recommend this platform." },
-  { id: 8, name: "Frank Blue", image: "/profile.jpg", rating: 5, review: "Top-notch service and quality!" },
+  { id: 1, name: "Moyin Odunlayo", image: "/profile.svg", rating: 5, review: "Afrogora is amazing! Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 2, name: "John Doe", image: "/profile.svg", rating: 4, review: "Great shopping experience.Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 3, name: "Jane Smith", image: "/profile.svg", rating: 5, review: "Fast delivery and great service! Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 4, name: "Alice Brown", image: "/profile.svg", rating: 5, review: "Superb product quality! Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 5, name: "Charlie White", image: "/profile.svg", rating: 4, review: "Very user-friendly platform.Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 6, name: "Daniel Green", image: "/profile.svg", rating: 5, review: "Absolutely love Afrogora! Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 7, name: "Eve Black", image: "/profile.svg", rating: 5, review: "Highly recommend this platform.Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
+  { id: 8, name: "Frank Blue", image: "/profile.svg", rating: 5, review: "Top-notch service and quality! Afrogora has transformed myshopping experience. I love the diverse range of products and the seamless delivery services!" },
 ];
 
 export default function Testimonial() {
@@ -60,8 +60,8 @@ export default function Testimonial() {
       </div>
 
       {/* Custom Controls */}
-      <div id="control" className="w-full flex justify-end items-center">
-        <button onClick={prevSlide} className="p-2 bg-gray-200 rounded-full">
+      <div id="control" className="w-full flex justify-center md:justify-end items-center">
+        <button onClick={prevSlide} className="p-2 rounded-full">
           <IoIosArrowBack size={24} />
         </button>
         <div className="flex space-x-2">
@@ -75,7 +75,7 @@ export default function Testimonial() {
             />
           ))}
         </div>
-        <button onClick={nextSlide} className="p-2 bg-gray-200 rounded-full">
+        <button onClick={nextSlide} className="p-2 rounded-full">
           <IoIosArrowForward size={24} />
         </button>
       </div>
@@ -84,18 +84,18 @@ export default function Testimonial() {
 }
 
 const TestimonialCard = ({ name, image, rating, review }) => (
-  <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col items-start space-y-4">
+  <div className="bg-white p-6 rounded-xl shadow-md border-[0.01px] flex flex-col items-start space-y-4">
     <div className="flex items-center space-x-4">
       <Image src={image} alt={name} width={50} height={50} className="rounded-full" />
       <div>
         <h3 className="font-bold text-lg">{name}</h3>
-        <div className="flex text-yellow-500">
+        <div className="flex text-[#FFFF26]">
           {[...Array(rating)].map((_, i) => (
             <AiFillStar key={i} />  
           ))}
         </div>
       </div>
     </div>
-    <p className="text-gray-700">{review}</p>
+    <p className="text-gray-700 mx-12">{review}</p>
   </div>
 );

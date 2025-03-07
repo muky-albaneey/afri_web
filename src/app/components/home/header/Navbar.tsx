@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#ffffff] shadow-md px-6 py-4" id={isOpen ? "overlay_bg" : ""}>
+    <nav className="bg-[#ffffff] shadow-md px-6 py-4 fixed top-0 left-0 w-full z-50" id={isOpen ? "overlay_bg" : ""}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <div className="text-2xl font-bold">Afrigora</div>

@@ -4,7 +4,7 @@ export default function Ads() {
   return (
     <div className="bg-[#8B572A] text-white h-90 md:h-auto py-6 flex flex-col items-center justify-center px-4">
       {/* Title */}
-      <h1 className="text-3xl md:text-5xl font-bold text-center">
+      <h1 className="w-full text-2xl md:text-5xl font-bold text-center mt-10">
         Enjoy Seamless Navigation on The Mobile App
       </h1>
       <p className="text-lg md:text-xl text-center mt-2">
@@ -22,43 +22,46 @@ export default function Ads() {
           Download on Apple Store
         </button>
       </div>
+ {/* Mobile Buttons - Centered Below the Images */}
+ <section className="w-full flex justify-center relative mt-5 md:hidden">
+  <div className="flex flex-col items-center gap-2 absolute top-2">
+    <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
+      <Image src="/google-play.png" alt="Google Play" width={14} height={14} />
+      Download on Google Play
+    </button>
+    <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
+      <Image src="/apple-store.png" alt="Apple Store" width={14} height={14} />
+      Download on Apple Store
+    </button>
+  </div>
+</section>
 
       {/* Mobile View - Two Tilted Images & Buttons in the Center */}
-      <div className="relative flex flex-col items-center mt-10 md:hidden">
-        <div className="flex gap-x-10 justify-center relative">
+      <div className="w-full flex flex-col items-end justify-end  md:hidden">
+        <div className="w-full flex items-end mt-3.5">
           {/* First Image (Tilted Left) */}
-          <div className="w-35 drop-shadow-lg transform  absolute -top-6 -left-50">
-            <Image
-              src="/mobile_2.svg"
-              alt="Mobile App Screen"
-              width={200}
-              height={400}
-              layout="responsive"
-            />
-          </div>
+          <div className="w-full flex justify-between items-end">
+            <div className="w-35 drop-shadow-lg">
+              <Image
+                src="/mobile_2.svg"
+                alt="Mobile App Screen"
+                width={100}
+                height={300}
+                layout="responsive"
+              />
+            </div>
 
-          {/* Second Image (Tilted Right) */}
-          <div className="w-30 drop-shadow-lg transform absolute -top-3  -right-49">
-            <Image
-              src="/mobile_1.svg"
-              alt="Mobile App Screen"
-              width={200}
-              height={400}
-              layout="responsive"
-            />
+            {/* Second Image (Tilted Right) */}
+            <div className="w-30 drop-shadow-lg ">
+              <Image
+                src="/mobile_1.svg"
+                alt="Mobile App Screen"
+                width={120}
+                height={320}
+                layout="responsive"
+              />
           </div>
-        </div>
-
-        {/* Mobile Buttons - Centered Below the Images */}
-        <div className="flex flex-col items-center gap-3 ">
-          <button className="bg-black flex items-center gap-2  py-2 rounded-md shadow-lg text-xs">
-            <Image src="/google-play.png" alt="Google Play" width={10} height={10} />
-            Download on Google Play
-          </button>
-          <button className="bg-black flex items-center gap-2 py-2 rounded-md shadow-lg text-xs">
-            <Image src="/apple-store.png" alt="Apple Store" width={10} height={10} />
-            Download on Apple Store
-          </button>
+          </div>
         </div>
       </div>
 
