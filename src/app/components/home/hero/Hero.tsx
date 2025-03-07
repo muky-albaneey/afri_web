@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Left Content */}
         <div className="text-center lg:text-left flex-1">
           <h1 className="text-3xl lg:text-5xl font-bold text-[#1D1D1D] leading-tight">
-            Celebrate Tradition, <br /> <span className="text-[#1D1D1D]">Redefined for <span className="relative">Today</span></span>
+            Celebrate Tradition, <br /> <span className="text-[#1D1D1D]">Redefined for <span className="">Today</span></span>
           </h1>
           <p className="text-[#6B6B6B] mt-4 text-lg">
             Discover our handcrafted native wear, blending timeless culture with contemporary design
@@ -27,9 +27,9 @@ export default function Hero() {
           <div className="mt-8 flex items-center justify-center lg:justify-start">
             {/* Profile Images */}
             <div className="flex">
-              <Image src="/profile1.jpg" alt="Customer 1" width={40} height={40} className="rounded-full border-2 border-white -ml-2 first:ml-0" />
-              <Image src="/profile2.jpg" alt="Customer 2" width={40} height={40} className="rounded-full border-2 border-white -ml-2" />
-              <Image src="/profile3.jpg" alt="Customer 3" width={40} height={40} className="rounded-full border-2 border-white -ml-2" />
+              <Image src="/cus1.png" alt="Customer 1" width={40} height={40} className="rounded-full border-2 border-white -ml-2 first:ml-0" />
+              <Image src="/cus2.png" alt="Customer 2" width={40} height={40} className="rounded-full border-2 border-white -ml-2" />
+              <Image src="/cus3.png" alt="Customer 3" width={40} height={40} className="rounded-full border-2 border-white -ml-2" />
               <div className="w-10 h-10 bg-gray-200 flex items-center justify-center rounded-full -ml-2 text-sm font-medium">
                 +300k
               </div>
@@ -42,7 +42,7 @@ export default function Hero() {
         {/* Right Content - Image */}
         <div className="flex-1">
           <Image
-            src="/fashion-designer.jpg"
+            src="/hero.svg"
             alt="Fashion Designer"
             width={600}
             height={400}
