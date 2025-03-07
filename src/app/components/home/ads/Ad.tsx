@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Ads() {
   return (
-    <div className="bg-[#8B572A] text-white h-90 md:h-auto py-6 flex flex-col items-center justify-center px-4">
+    <div className="bg-[#8B572A] text-white h-90 md:h-auto md:py-6 flex flex-col items-center justify-center md:px-4">
       {/* Title */}
       <h1 className="w-full text-2xl md:text-5xl font-bold text-center mt-10">
         Enjoy Seamless Navigation on The Mobile App
@@ -14,11 +14,11 @@ export default function Ads() {
       {/* Desktop Buttons (Above Images) */}
       <div className="hidden md:flex flex-row gap-4 mt-6">
         <button className="bg-black flex items-center gap-2 px-6 py-2 rounded-md">
-          <Image src="/google-play.png" alt="Google Play" width={20} height={20} />
+          <Image src="/logos_google-play-icon.svg" alt="Google Play" width={20} height={20} />
           Download on Google Play
         </button>
         <button className="bg-black flex items-center gap-2 px-6 py-2 rounded-md">
-          <Image src="/apple-store.png" alt="Apple Store" width={20} height={20} />
+          <Image src="/apple-store.svg" alt="Apple Store" width={20} height={20} />
           Download on Apple Store
         </button>
       </div>
@@ -26,11 +26,11 @@ export default function Ads() {
  <section className="w-full flex justify-center relative mt-5 md:hidden">
   <div className="flex flex-col items-center gap-2 absolute top-2">
     <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
-      <Image src="/google-play.png" alt="Google Play" width={14} height={14} />
+      <Image src="/logos_google-play-icon.svg" alt="Google Play" width={14} height={14} />
       Download on Google Play
     </button>
     <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
-      <Image src="/apple-store.png" alt="Apple Store" width={14} height={14} />
+      <Image src="/apple-store.svg" alt="Apple Store" width={14} height={14} />
       Download on Apple Store
     </button>
   </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AppDownloadSection = () => {
   return (
-    <div className="bg-[#8B4513] py-12 px-4 md:px-8 lg:px-16 text-white relative">
+    <div className="bg-[#8B4513] md:py-12 md:px-8 lg:px-16 text-white relative">
      <div className="w-full md:hidden">
      <h1 className="text-2xl md:text-5xl font-bold text-center">
         Enjoy Seamless Navigation on The Mobile App
@@ -14,11 +14,11 @@ const AppDownloadSection = () => {
         <section className="w-full flex justify-center relative mt-5 md:hidden">
          <div className="flex flex-col items-center gap-2 absolute top-2">
            <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
-             <Image src="/google-play.png" alt="Google Play" width={14} height={14} />
+             <Image src="/logos_google-play-icon.svg" alt="Google Play" width={14} height={14} />
              Download on Google Play
            </button>
            <button className="bg-black flex items-center gap-1 px-3 py-1.5 rounded-md shadow-lg text-[10px]">
-             <Image src="/apple-store.png" alt="Apple Store" width={14} height={14} />
+             <Image src="/apple-store.svg" alt="Apple Store" width={14} height={14} />
              Download on Apple Store
            </button>
          </div>
@@ -35,12 +35,12 @@ const AppDownloadSection = () => {
        {/* Mobile Buttons - Centered Below the Images */}
               <section className="w-full flex justify-center relative mt-8">
               <div className="flex flex-col items-center gap-3 absolute top-3.5">
-                        <button className="bg-black flex items-center gap-2  py-2 rounded-md shadow-lg text-xs ">
-                          <Image src="/google-play.png" alt="Google Play" width={10} height={10} />
+                        <button className="bg-black flex items-center gap-2  py-2 rounded-md shadow-lg text-xm">
+                          <Image src="/logos_google-play-icon.svg" alt="Google Play" width={50} height={40} />
                           Download on Google Play
                         </button>
-                        <button className="bg-black flex items-center gap-2 py-2 rounded-md shadow-lg text-xs">
-                          <Image src="/apple-store.png" alt="Apple Store" width={10} height={10} />
+                        <button className="bg-black flex items-center gap-2 py-2 rounded-md shadow-lg text-xm">
+                          <Image src="/apple-store.svg" alt="Apple Store" width={50} height={40} />
                           Download on Apple Store
                         </button>
                       </div>

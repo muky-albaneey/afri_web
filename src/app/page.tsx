@@ -9,6 +9,8 @@ import Ads from "./components/home/ads/Ad";
 import SaleCarousel from "./components/home/sale/Sale";
 import Testimonial from "./components/home/testimonials/Testimonial";
 import AppDownloadSection from "./components/home/ads/AppDownloadSection";
+import Newsletter from "./components/home/newsletter/Newsletter";
+import Footer from "./components/home/footer/Foo";
 // import Testimonial from "./components/home/testimonials/Testimonial";
 
 export default function Home() {
@@ -31,6 +33,8 @@ export default function Home() {
       <SaleCarousel />
       <Testimonial />
       <AppDownloadSection />
+      <Newsletter />
+      <Footer />
     </div>
   );
 }

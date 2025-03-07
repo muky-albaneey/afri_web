@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="border-2 border-[#8B4513] text-brown-600 px-16 py-2 rounded-md">
+          <button className="border-1 border-[#8B4513] text-brown-600 px-16 py-2 rounded-md">
             Sign Up
           </button>
 
