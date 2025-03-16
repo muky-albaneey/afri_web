@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 
-const showHeaderOnRoutes = ["/", "/product/[id]", "/store/[id]","/about", "/service","/product_detail/[id]"];
+const showHeaderOnRoutes = ["/", "/product/[id]", "/store/[id]","/about", "/service","/product_detail/[id]","/tailor/[id]"];
 
 export default function HeaderWrapper() {
   const pathname = usePathname();

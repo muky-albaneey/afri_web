@@ -12,8 +12,7 @@ export default function Hero() {
           <h1 className="text-3xl lg:text-5xl font-bold text-[#1D1D1D] leading-tight">
           <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
-                'We Celebrate Tradition, ',
+                'We Celebrate Tradition,',
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 'Re imagine Legacy',
                 1000,

@@ -7,7 +7,7 @@ const Header = () => {
   const pathname = usePathname();
 
   // Define routes where the header should appear
-  const showHeaderOnRoutes = ["/", "/product/[id]", "/store/[id]","/about","/service","/product_detail/[id]"];
+  const showHeaderOnRoutes = ["/", "/product/[id]", "/store/[id]","/about","/service","/product_detail/[id]","/tailor/[id]"];
 
   const shouldShowHeader = showHeaderOnRoutes.some((route) =>
     route.includes("[id]")
