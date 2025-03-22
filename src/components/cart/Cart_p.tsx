@@ -17,13 +17,13 @@ const Cart = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Side - Cart Items */}
         <div className="lg:col-span-2">
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <div className="flex justify-between items-center border-b pb-4">
+          <div className="bg-white border border-[#ADADAD66] shadow-md rounded-lg p-6">
+            <div className="flex justify-between items-center pb-4">
               <h2 className="text-xl font-semibold">Cart</h2>
               <span className="bg-brown-600 text-white rounded-full px-3 py-1 text-sm">4</span>
             </div>
             {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="flex items-center border-b py-4">
+              <div key={item} className="flex items-center border-b border-[#ADADAD66] py-4">
                 <div className="w-16 h-16 overflow-hidden rounded-md">
                   <Image
                     src="/product-image.png"
@@ -53,43 +53,43 @@ const Cart = () => {
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           {/* Delivery Method */}
-          <div className="flex items-center space-x-4">
-  <button
-    onClick={() => handleDeliveryChange('pickup')}
-    className={`flex-1 flex items-center justify-center py-2 border rounded-full text-sm ${
-      deliveryMethod === 'pickup'
-        ? 'border-[#8B4513] bg-[#8B4513] text-white'
-        : 'border-gray-300 text-gray-500'
-    }`}
-  >
-    <span
-      className={`w-4 h-4 mr-2 border rounded-full ${
-        deliveryMethod === 'pickup'
-          ? 'bg-[#8B4513] border-[#8B4513]'
-          : 'border-gray-300 bg-white'
-      }`}
-    />
-    Pickup
-  </button>
-  
-  <button
-    onClick={() => handleDeliveryChange('delivery')}
-    className={`flex-1 flex items-center justify-center py-2 border rounded-full text-sm ${
-      deliveryMethod === 'delivery'
-        ? '  text-[#8B4513]'
-        : 'border-gray-300 text-gray-500'
-    }`}
-  >
-    <span
-      className={`w-4 h-4 mr-2 border rounded-full ${
-        deliveryMethod === 'delivery'
-          ? 'bg-[#8B4513] border-[#8B4513]'
-          : 'border-gray-300 bg-white'
-      }`}
-    />
-    Delivered to your place
-  </button>
-</div>
+          <div className="flex flex-col items-baseline space-x-4">
+                <button
+                    onClick={() => handleDeliveryChange('pickup')}
+                    className={`flex-1 flex items-center justify-center py-2  rounded-full text-sm ${
+                    deliveryMethod === 'pickup'
+                        ?  'text-[#8B4513]'
+                        : ' text-gray-500'
+                    }`}
+                >
+                    <span
+                    className={`w-4 h-4 mr-2 border rounded-full ${
+                        deliveryMethod === 'pickup'
+                        ? 'bg-[#8B4513] border-[#8B4513]'
+                        : 'border-gray-300 bg-white'
+                    }`}
+                    />
+                    Pickup
+                </button>
+        
+                <button
+                    onClick={() => handleDeliveryChange('delivery')}
+                    className={`flex-1 flex items-center justify-center py-2  rounded-full text-sm ${
+                    deliveryMethod === 'delivery'
+                        ? '  text-[#8B4513]'
+                        : ' text-gray-500'
+                    }`}
+                >
+            <span
+            className={`w-4 h-4 mr-2 border rounded-full ${
+                deliveryMethod === 'delivery'
+                ? 'bg-[#8B4513] border-[#8B4513]'
+                : 'border-gray-300 bg-white'
+            }`}
+            />
+            Delivered to your place
+        </button>
+    </div>  
 
           {/* Order Details */}
           <div className="mt-4 space-y-2 text-sm">
@@ -105,7 +105,7 @@ const Cart = () => {
               <span>Discount (-20%)</span>
               <span>-$113</span>
             </div>
-            <div className="flex justify-between font-semibold">
+            <div className="flex justify-between font-semibold text-2xl">
               <span>Total</span>
               <span className="text-lg">$467</span>
             </div>
