@@ -7,12 +7,12 @@ export default function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState('card');
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4 md:px-10">
+    <div className="min-h-screen py-10 px-4 md:px-10">
       <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 items-baseline ">
         {/* Cart Section */}
         <div className="md:col-span-2">
         <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
-          <div className="bg-white shadow-md rounded-lg p-4">
+          <div className="border border-[#E4E7EC] rounded-lg p-4">
             {/* Cart Items */}
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="flex items-start gap-4 border-b border-[#E4E7EC] py-4">
@@ -30,7 +30,7 @@ export default function Checkout() {
           </div>
 
           {/* Delivery Information */}
-          <div className="mt-6 bg-white shadow-md rounded-lg p-4 ">
+          <div className="mt-6 shadow-md rounded-lg p-4 ">
             <h2 className="text-lg font-semibold mb-4">Delivery Information</h2>
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -99,25 +99,71 @@ export default function Checkout() {
             <h2 className="text-lg font-semibold mb-4">Order Payment</h2>
 
             {/* Payment Options */}
-            <div className="mb-4">
-              <label className="flex items-center gap-2">
+            <div className="mb-4 flex flex-col gap-4 mt-12">
+              {/* <label className="flex items-center gap-2">
                 <input
                   type="radio"
                   name="payment"
                   checked={paymentMethod === 'card'}
                   onChange={() => setPaymentMethod('card')}
+                  className='bg-amber-700'
                 />
                 Debit or Credit Card
-              </label>
-              <label className="flex items-center gap-2 mt-2">
-                <input
-                  type="radio"
-                  name="payment"
-                  checked={paymentMethod === 'cash'}
-                  onChange={() => setPaymentMethod('cash')}
-                />
-                Pay on Delivery
-              </label>
+              </label> */}
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="payment"
+                    checked={paymentMethod === 'card'}
+                    onChange={() => setPaymentMethod('card')}
+                    className="hidden"
+                  />
+                  <div className={`w-5 h-5 border-2 rounded-full flex items-center justify-center ${paymentMethod === 'card' ? 'bg-[#603813] border-[#603813]' : 'border-gray-400'}`}>
+                    {paymentMethod === 'card' && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-3 w-3 text-white"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                    )}
+                  </div>
+                  <span className="text-black">Debit or Credit Card</span>
+                </label>
+
+                <label className="flex items-center gap-2 mt-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="payment"
+                    checked={paymentMethod === 'cash'}
+                    onChange={() => setPaymentMethod('cash')}
+                    className="hidden"
+                  />
+                  <div className={`w-5 h-5 border-2 rounded-full flex items-center justify-center ${paymentMethod === 'cash' ? 'bg-[#603813] border-[#603813]' : 'border-gray-400'}`}>
+                    {paymentMethod === 'cash' && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-3 w-3 text-white"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                    )}
+                  </div>
+                  <span className="text-black">Pay on Delivery</span>
+                </label>
+
             </div>
 
             {/* Card Details */}

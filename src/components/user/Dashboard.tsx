@@ -45,6 +45,7 @@ function MainSection(){
 {/* Recent Appointments */}
 <div className="mt-6 bg-white p-4 rounded-lg shadow-sm w-[100%] md:w-[49%]">
   <h3 className="text-lg font-semibold">Recent Appointments</h3>
+  <span className='text-[#737373] text-[13.6px]'>Your upcoming and recent appointments</span>
   {[
     {
       title: 'Suit Fitting with Elena Crafts',
@@ -57,10 +58,10 @@ function MainSection(){
   ].map((appointment) => (
     <div key={appointment.title} className="flex justify-between mt-4">
       <div>
-        <h4 className="font-medium">{appointment.title}</h4>
-        <p className="text-gray-500 text-sm">{appointment.date}</p>
+        <h4 className=" text-[#0A0A0A] font-bold text-[13.6px]">{appointment.title}</h4>
+        <p className="text-[#737373] text-sm">{appointment.date}</p>
       </div>
-      <button className="px-4 py-1 bg-gray-100 text-gray-700 border rounded hover:bg-gray-200">
+      <button className="px-4 py-1 border-[#E5E5E5] text-[#0A0A0A] border rounded hover:bg-gray-200">
         View
       </button>
     </div>
@@ -70,26 +71,31 @@ function MainSection(){
 {/* Your Measurements */}
 <div className="mt-6 bg-white p-4 rounded-lg shadow-sm w-[100%] md:w-[48%]">
   <h3 className="text-lg font-semibold">Your Measurements</h3>
-  <p className="text-gray-500 text-sm">2 Measurement Sets</p>
-  <p className="text-gray-400 text-xs">Last updated: April 10, 2023</p>
+  <div className='flex justify-between'>
+    <section>
+    <p className="text-gray-500 text-sm">2 Measurement Sets</p>
+    <p className="text-gray-400 text-xs">Last updated: April 10, 2023</p>
+    </section>
+    <button
+      className="px-4 py-2 border border-[#E5E5E5] rounded hover:bg-gray-200"
+      onClick={() => setShowOptions(!showOptions)}
+    >
+      Manage
+    </button>
+  </div>
   <div className="flex gap-2 mt-4">
     <button className="w-[70%] bg-[#8B4513] text-white px-4 py-2 rounded hover:bg-brown-600">
       Add New Measurements
     </button>
-    <button
-  className="px-4 py-2 bg-gray-100 border rounded hover:bg-gray-200"
-  onClick={() => setShowOptions(!showOptions)}
->
-  Manage
-</button>
+   
   </div>
   {/* Edit/Delete Buttons */}
   {showOptions && (
-<div className="mt-2 relative">
-  <button className="absolute right-0 top-0 bg-gray-100 border rounded px-4 py-2 hover:bg-gray-200">
+<div className="mt-2 relative flex flex-col items-end z-50 -top-12 left-3 md:-left-11">
+  <button className="  bg-gray-100 w-[124px] border rounded border-[#E5E5E5] px-4 py-2 hover:bg-gray-200">
     Edit
   </button>
-  <button className="absolute right-0 top-12 bg-red-500 text-white border rounded px-4 py-2 hover:bg-red-600">
+  <button className=" bg-[#8B4513] w-[124px]  text-white border rounded border-[#E5E5E5] px-4 py-2 ">
     Delete
   </button>
 </div>
@@ -98,7 +104,7 @@ function MainSection(){
 </div>
 <div className="w-full flex flex-col items-start justify-baseline  gap-7">
 <SavedTailors />
-<AppDownloadSection />
+
 </div>
     </>
   )

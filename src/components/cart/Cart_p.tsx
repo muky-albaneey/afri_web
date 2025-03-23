@@ -17,7 +17,7 @@ const Cart = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Side - Cart Items */}
         <div className="lg:col-span-2">
-          <div className="bg-white border border-[#ADADAD66] shadow-md rounded-lg p-6">
+          <div className=" border border-[#ADADAD66] rounded-lg p-6">
             <div className="flex justify-between items-center pb-4">
               <h2 className="text-xl font-semibold">Cart</h2>
               <span className="bg-brown-600 text-white rounded-full px-3 py-1 text-sm">4</span>

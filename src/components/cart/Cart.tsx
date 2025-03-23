@@ -35,7 +35,7 @@ const Cart = () => {
         {/* Left Section - Cart Items */}
         <div className="w-full md:w-2/3">
           <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="border border-[#E4E7EC] p-4 rounded-lg">
             <div className="flex items-center justify-between mb-4">
               <span className="font-semibold">Cart</span>
               <span className="bg-brown-600 text-white px-2 py-1 rounded-full text-sm">
@@ -43,7 +43,7 @@ const Cart = () => {
               </span>
             </div>
             {items.map((item) => (
-              <div key={item.id} className="flex items-center justify-between border-b py-4">
+              <div key={item.id} className="flex items-center justify-between border-b border-[#E4E7EC] py-4">
                 <div className="flex items-center gap-4">
                   {/* Product Image */}
                   <Image
@@ -91,7 +91,7 @@ const Cart = () => {
         {/* Right Section - Order Summary */}
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="border border-[#E4E7EC] p-4 rounded-lg">
             <div className="flex justify-between mb-2">
               <span>Items</span>
               <span className="font-semibold">{items.reduce((sum, item) => sum + item.quantity, 0)}</span>
@@ -113,7 +113,7 @@ const Cart = () => {
             <div className="flex mt-4 gap-2">
               <input
                 type="text"
-                className="w-full px-2 py-1 border rounded-lg"
+                className="w-full px-2 py-1 bg-[#F0F0F0] rounded-lg"
                 placeholder="Add promo code"
               />
               <button className="bg-[#8B4513] text-white px-4 rounded-lg">
@@ -122,10 +122,11 @@ const Cart = () => {
             </div>
 
             {/* Proceed Button */}
-            <button className="w-full bg-[#8B4513] text-white py-2 mt-4 rounded-lg">
+           
+          </div>
+          <button className="w-full bg-[#8B4513] text-white py-2 mt-4 rounded-lg">
               Proceed to payment
             </button>
-          </div>
         </div>
       </div>
 

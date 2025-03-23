@@ -40,7 +40,7 @@ const SavedTailors = () => {
       {tailors.map((tailor) => (
         <div
           key={tailor.id}
-          className="flex items-start p-4 bg-white shadow-sm rounded-lg border mb-4"
+          className="flex items-start p-4  shadow-sm rounded-lg border border-[#E5E5E5] mb-4"
         >
           {/* Image */}
           <div className="w-16 h-16 bg-gray-200 rounded-lg mr-4 flex-shrink-0">
@@ -81,7 +81,7 @@ const SavedTailors = () => {
               {tailor.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-gray-600 text-xs bg-gray-100 rounded-full px-2 py-1"
+                  className="text-[#171717] text-xs bg-[#F5F5F5] rounded-full px-2 py-1"
                 >
                   {tag}
                 </span>
@@ -90,10 +90,10 @@ const SavedTailors = () => {
 
             {/* Buttons */}
             <div className="mt-3 flex gap-2 flex-col md:flex-row">
-              <button className="px-4 py-2 text-sm border border-gray-300 rounded-md">
+              <button className="px-4 py-2 text-sm border border-[#E5E5E5] rounded-md">
                 View Profile
               </button>
-              <button className="px-4 py-2 text-sm bg-[#8B4513] text-white rounded-md">
+              <button className="px-4 py-2 text-sm bg-[#8B4513] text-[#FAFAFA] rounded-md">
                 Share Measurements
               </button>
             </div>
@@ -103,7 +103,7 @@ const SavedTailors = () => {
 
       {/* Footer Button */}
       <div className="flex justify-center mt-4">
-        <button className="px-6 py-2 border border-gray-300 rounded-md text-sm">
+        <button className="px-6 py-2 border border-[#E5E5E5] rounded-md text-sm">
           View All Saved Tailors
         </button>
       </div>
