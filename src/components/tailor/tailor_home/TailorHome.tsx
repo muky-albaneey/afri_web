@@ -425,16 +425,7 @@ const TailorListing = () => {
 
           <h6>Sort by</h6>
           <CustomDropdown value={sortBy} onChange={handleSort} />
-         {/* <select
-            value={sortBy}
-            onChange={(e) => handleSort(e.target.value)}
-            className="border border-gray-100 rounded-sm py-2 px-3 text-sm outline-none md:mt-0 mt-1 bg-[#C5A289] text-white appearance-none"
-          >
-            <option className="bg-[#C5A289]">Highest Rating</option>
-            <option className="bg-[#C5A289]">Lowest Rating</option>
-            <option className="bg-[#C5A289]">Alphabetical (A-Z)</option>
-            <option className="bg-[#C5A289]">Alphabetical (Z-A)</option>
-          </select> */}
+        
 
         </div>
           </div>
